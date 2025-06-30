@@ -1,0 +1,283 @@
+:root {
+
+  --verde-claro: #d8f3dc;
+  --verde-oscuro: #6ed9a9;
+  --beige: #8f8c79;
+  --texto: #333;
+  --blanco: #ffffff;
+    --color-fondo: #f0f7f4;
+  --color-principal: #2a9d8f;
+  --color-secundario: #8bd885;
+  --color-claro: #fefae0;
+  --color-oscuro: #264653;
+  --color-texto: #333333;
+  --color-borde: #cccccc;
+}
+
+
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--beige);
+  color: var(--texto);
+  padding-top: 100px; /* para que no se oculte detrás del header fijo */
+}
+
+/* === HEADER FIJO === */
+.header-fijo {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--verde-claro);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.contenedor-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5em 1em;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.contenedor-header h1 {
+  flex: 1;
+  margin-left: 1em;
+  color: var(--verde-oscuro);
+  font-size: 1.5em;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 1.8em;
+  display: none;
+  color: var(--verde-oscuro);
+  cursor: pointer;
+}
+
+/* === NAV === */
+nav.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+nav.nav a {
+  text-decoration: none;
+  color: var(--verde-oscuro);
+  padding: 0.5em 1em;
+  border-radius: 20px;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+nav.nav a:hover {
+  background-color: var(--verde-oscuro);
+  color: var(--blanco);
+}
+
+/* === MAIN === */
+main {
+  padding: 2em;
+  text-align: center;
+}
+
+
+.galeria-inicio {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  flex-wrap: wrap;
+  margin-top: 1.5em;
+}
+
+.galeria-inicio img {
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  object-fit: cover;
+}
+
+.tabla-beneficios {
+  overflow-x: auto;
+  margin-top: 1.5em;
+}
+
+.tabla-beneficios table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--color-claro);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tabla-beneficios th,
+.tabla-beneficios td {
+  padding: 1em;
+  text-align: left;
+  border: 1px solid var(--color-borde);
+}
+
+.tabla-beneficios th {
+  background-color: var(--color-secundario);
+  color: var(--color-oscuro);
+}
+
+.tabla-beneficios img {
+  width: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.bienvenida {
+  background-color: var(--verde-claro);
+  padding: 2em;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.6em;
+  padding: 2em 0;
+}
+
+.producto {
+  background-color: var(--color-claro);
+  border: 1px solid var(--color-borde);
+  border-radius: 20px;
+  text-align: center;
+  padding: 2em;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.producto img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.5em;
+}
+
+.producto h3 {
+  margin: 0.5em 0;
+  color: var(--color-principal);
+}
+
+.producto p {
+  font-size: 0.9em;
+  color: var(--color-texto);
+}
+/* Estilos para la sección de Contacto */
+#contacto {
+  padding: 2em;
+  background-color: var(--color-fondo);
+}
+
+.info-contacto p {
+  margin: 0.5em 0;
+  font-size: 1em;
+  color: var(--color-oscuro);
+}
+
+.formulario-mapa {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  margin-top: 1.5em;
+}
+
+.contacto-form {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+  padding: 0.8em;
+  border: 1px solid var(--color-borde);
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.contacto-form button {
+  background-color: var(--color-principal);
+  color: var(--color-claro);
+  padding: 0.8em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contacto-form button:hover {
+  background-color: var(--color-secundario);
+}
+
+.mapa {
+  flex: 1 1 300px;
+}
+
+
+
+
+/* === FOOTER === */
+footer {
+  background-color: var(--verde-oscuro);
+  color: var(--blanco);
+  text-align: center;
+  padding: 1em;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .contenedor-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav.nav {
+    display: none;
+    width: 100%;
+  }
+
+  nav.nav.active {
+    display: block;
+  }
+
+  nav.nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav.nav ul li {
+    width: 100%;
+  }
+
+  nav.nav a {
+    display: block;
+    width: 100%;
+    padding: 1em;
+    border: none;
+    border-bottom: 1px solid #ccc;
+  }
+}
